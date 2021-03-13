@@ -11,7 +11,7 @@ function! memo#memo_start() abort
    let s:current_dir = getcwd()
    execute 'cd' g:memo_saved_dir
 
-   if memo_preview
+   if g:memo_preview
       execute 'new' 
    else
       " 0 垂直でウィンドウを開く
@@ -20,7 +20,7 @@ function! memo#memo_start() abort
 endfunction
 
 function! memo#memo_list() abort
-   if memo_preview
+   if g:memo_preview
       execute 'sp' g:memo_saved_dir
    else
       execute 'vs' g:memo_saved_dir
