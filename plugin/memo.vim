@@ -7,4 +7,4 @@ command! Memo call memo#memo_start()
 
 command! Memolist call memo#memo_list()
 
-command! -nargs=1 Memo call memo#memo_create(<q-args>)
+command! -nargs=1 MemoCreate call memo#memo_create(<q-args>)
