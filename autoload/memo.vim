@@ -21,7 +21,7 @@ endfunction
 
 function! memo#memo_create(file) abort
    if g:memo_preview
-      execute 'new' (g:memo_saved_dir ."/". a:file 
+      execute 'new' (g:memo_saved_dir ."/". a:file )
    else
       execute 'vnew' g:memo_saved_dir . a:file 
    endif
