@@ -24,7 +24,7 @@ function! memo#memo_create(file) abort
    if g:memo_preview
       execute 'sp'  g:memo_create_path
    else
-      execute 'vnew' g:memo_saved_dir . a:file 
+      execute 'vs' g:memo_create_path 
    endif
 endfunction
 
