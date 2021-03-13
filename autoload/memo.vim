@@ -20,8 +20,9 @@ function! memo#memo_start() abort
 endfunction
 
 function! memo#memo_create(file) abort
+   let s:memo_create_path = g:memo_saved_dir . "/" . a:file
    if g:memo_preview
-      execute 'new' (g:memo_saved_dir ."/". a:file )
+      execute 'new'  s:memo_create_path
    else
       execute 'vnew' g:memo_saved_dir . a:file 
    endif
