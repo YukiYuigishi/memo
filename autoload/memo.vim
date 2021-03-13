@@ -11,11 +11,18 @@ function! g:memo_start() abort
    let s:current_dir = execute 'pwd'
    execute 'cd' memo_saved_dir
 
-   if memo_start
-      " 0 垂直でウィンドウを開く
-      execute 'vnew' 
+   if memo_preview
+      execute 'new' 
    else
-      execute 'new'
+      " 0 垂直でウィンドウを開く
+      execute 'vnew'
    endif
 endfunction
 
+function! g:memo_list abort
+   if memo_preview
+      execute 'sp' memo_saved_dir
+   else
+      execute 'vs' memo_saved_dir
+   endif
+endfunction
