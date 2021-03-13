@@ -22,7 +22,7 @@ endfunction
 function! memo#memo_create(file) abort
    let g:memo_create_path = g:memo_saved_dir . "/" . a:file
    if g:memo_preview
-      execute 'sp'  s:memo_create_path
+      execute 'sp'  g:memo_create_path
    else
       execute 'vnew' g:memo_saved_dir . a:file 
    endif
