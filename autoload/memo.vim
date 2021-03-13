@@ -19,6 +19,15 @@ function! memo#memo_start() abort
    endif
 endfunction
 
+function! memo#memo_create(file) abort
+   if g:memo_preview
+      execute 'new' g:memo_saved_dir . a:file 
+   else
+      execute 'vnew' g:memo_saved_dir . a:file 
+   endif
+endfunction
+
+
 function! memo#memo_list() abort
    if g:memo_preview
       execute 'sp' g:memo_saved_dir

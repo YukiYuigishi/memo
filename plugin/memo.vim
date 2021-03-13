@@ -6,3 +6,5 @@ let g:loaded_memo = 1
 command! Memo call memo#memo_start()
 
 command! Memolist call memo#memo_list()
+
+command! -nargs=1 Memo call memo#memo_create(<q-args>)
