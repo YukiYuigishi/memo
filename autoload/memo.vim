@@ -9,7 +9,7 @@ let s:check_variable = exists("memo_preview")
 " memoをspで開くかvsで開くかを決める
 function! memo#memo_start() abort
    let s:current_dir = getcwd()
-   execute 'cd' memo_saved_dir
+   execute 'cd' g:memo_saved_dir
 
    if memo_preview
       execute 'new' 
@@ -21,8 +21,8 @@ endfunction
 
 function! memo#memo_list() abort
    if memo_preview
-      execute 'sp' memo_saved_dir
+      execute 'sp' g:memo_saved_dir
    else
-      execute 'vs' memo_saved_dir
+      execute 'vs' g:memo_saved_dir
    endif
 endfunction
